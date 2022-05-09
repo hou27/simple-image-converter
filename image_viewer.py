@@ -1,4 +1,4 @@
-# image_converter
+# image_view_converter
 
 import shutil
 import PySimpleGUI as sg 
@@ -6,7 +6,10 @@ import PIL.Image as Image
 import io # python에서 input output 관리하는 라이브러리
 import tempfile # 메모리 상에 저장되는 임시 파일
 
-from change_color import bw, bw_dithering, four_color, grayscale, create_sepia as sepia
+from converter.bw import bw, bw_dithering
+from converter.grayscale import grayscale
+from converter.four_color import four_color
+from converter.sepia import create_sepia as sepia
 
 tmp_file = tempfile.NamedTemporaryFile(suffix=".png").name
 
@@ -30,7 +33,7 @@ layout = [
     [sg.Button("Save"), sg.Button("Exit")]
 ]
 
-def main():
+def image_viewer():
     print("Image Viewer Started")
 
     window = sg.Window("Image Viewer", layout, size=(640, 700))
@@ -71,6 +74,3 @@ def main():
 
     window.close()
 
-
-if __name__ == '__main__':
-    main()
