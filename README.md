@@ -24,4 +24,16 @@ python .\main.py
 - Four_color
 - Sepia
 
+## Supported Filter
+
+- Blur
+- Contour
+- Detail
+- Edge Enhance
+- Emboss
+- Find Edges
+- Gaussian Blur
+- Sharpen
+- Smooth
+
 [Pillow Modes](https://pillow.readthedocs.io/en/stable/handbook/concepts.html#concept-modes)
