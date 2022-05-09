@@ -1,0 +1,11 @@
+### unofficial package ###
+*.whl
+
+### venv ###
+venv*/
+
+### pycache ###
+__pycache__/
+
+### jupyter notebook ###
+*.ipynb
